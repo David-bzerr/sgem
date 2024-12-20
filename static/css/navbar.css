@@ -1,0 +1,146 @@
+/* Navbar geral */
+.navbar {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    background-color: #3A5A40 !important; /* Verde mais escuro da paleta */
+    height: 56px; /* Altura reduzida */
+    position: fixed; /* Fixada no topo */
+    top: 0; /* Garantindo fixação */
+    width: 100%; /* Preenche toda a largura */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem; /* Espaçamento interno */
+
+
+
+    left: 0;
+
+    z-index: 1000;
+}
+
+/* Ajustes para responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto; /* Altura ajustável em telas menores */
+        padding: 0.5rem; /* Reduzindo o padding */
+    }
+}
+
+/* Logo */
+.logo-image {
+    margin-left: 50px; /* Ajustando margens para melhor visualização */
+    width: 120px; /* Tamanho da logo ajustado */
+    height: 40px;
+}
+
+/* Botões da navbar */
+.btn-outline-light {
+    color: #DAD7CD; /* Branco da paleta */
+    border-color: #DAD7CD;
+    padding: 5px 10px; /* Reduzindo tamanho */
+    font-size: 0.9rem; /* Texto menor */
+}
+
+.btn-outline-light:hover {
+    background-color: #DAD7CD; /* Branco ao hover */
+    color: #3A5A40; /* Texto verde escuro */
+}
+
+/* Botão de notificação */
+.btn-warning {
+    font-weight: bold;
+    background-color: #A3B18A; /* Verde claro da paleta */
+    color: #344E41; /* Texto mais escuro */
+    border-color: #A3B18A;
+    padding: 5px 10px; /* Reduzindo tamanho */
+    font-size: 0.9rem;
+}
+
+.btn-warning:hover {
+    background-color: #344E41; /* Verde mais escuro no hover */
+    color: #DAD7CD; /* Texto claro */
+}
+
+/* Ajustando responsividade para botões */
+@media (max-width: 768px) {
+    .navbar .btn {
+        width: 100%; /* Largura total */
+        margin-bottom: 5px; /* Espaçamento entre os botões */
+    }
+    
+}
+
+/* Espaçamento geral */
+body {
+    padding-top: 56px; /* Garante que o conteúdo não fique escondido atrás da navbar */
+}
+
+/* Botão para abrir/fechar sidebar */
+.toggle-sidebar-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1050; /* Para sobrepor a sidebar */
+}
+
+/* Contêiner da Logo */
+.logo-container {
+    width: 250px; /* Define a largura igual à da sidebar */
+    height: 45px;
+    background-color: #376b41; /* Cor de fundo */
+    padding: 10px 0; /* Ajusta o espaçamento interno */
+    display: flex; /* Garante alinhamento */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    border-radius: 0; /* Remove bordas arredondadas */
+    box-shadow: none; /* Remove sombra */
+    margin: 0; /* Remove margens extras */
+}
+
+/* Ajustes do navbar-toggler */
+.navbar-toggler {
+    border-color: #DAD7CD; /* Cor do botão */
+    color: #DAD7CD; /* Ícone da cor */
+}
+
+/* Ícone no botão do navbar-toggler */
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=UTF8,%3Csvg xmlns="http://www.w3.org/2000/svg" fill="%23DAD7CD" viewBox="0 0 30 30"%3E%3Cpath stroke="rgba(255, 255, 255, 1)" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+/* Ajuste do botão Logout e Notificações */
+.custom-navbar .btn {
+    margin: 0 5px; /* Espaçamento horizontal */
+    margin-right: 10px;
+}
+
+.custom-navbar .btn-outline-light {
+    color: #fff;
+    border-color: #fff;
+}
+
+.custom-navbar .btn-outline-light:hover {
+    background-color: #fff;
+    color: #588157;
+}
+
+/* Estilo para o ícone de notificação */
+.mingcute--notification-line,
+.mingcute--notification-newdot-fill {
+    font-size: 1.2rem;
+}
+
+/* Responsividade geral */
+@media (max-width: 576px) {
+    .logo-image {
+        width: 100px; /* Logo menor em telas pequenas */
+        height: auto; /* Proporção ajustável */
+    }
+
+    .navbar .btn {
+        font-size: 0.8rem; /* Texto menor */
+        padding: 4px 8px;
+    }
+}
+
+

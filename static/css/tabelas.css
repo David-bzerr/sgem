@@ -1,0 +1,135 @@
+/* Configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border sejam considerados no tamanho total */
+}
+
+/* Fundo geral da página */
+body {
+    background-color: #f1f8f1; /* Verde muito claro */
+    font-family: 'Montserrat', sans-serif; /* Fonte Montserrat */
+    color: black; /* Texto principal preto */
+}
+
+/* Contêiner da tabela */
+.tabela-container {
+    background-color: #a6bea5; /* Fundo verde claro */
+    padding: 20px;
+    border-radius: 5px;
+    padding-top: 60px; /* Espaço para a navbar */
+    padding-bottom: 60px; /* Espaço para o rodapé */
+    width: 100%; /* Garante que o contêiner ocupe toda a largura disponível */
+    overflow-x: auto; /* Habilita rolagem horizontal */
+    border: 2px solid #344E41; /* Verde escuro */
+}
+
+/* Estilo da tabela */
+.tabela-estilizada {
+    width: 100%;
+    border-collapse: collapse;
+    background: linear-gradient(90deg, #588157, #446353); /* Cor gradiente */
+    border: 2px solid #344E41; /* Verde escuro */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.tabela-estilizada th,
+.tabela-estilizada td {
+    border: 1px solid #344E41; /* Verde escuro */
+    padding: 8px;
+    text-align: left;
+    color: black; /* Texto preto */
+}
+
+.tabela-estilizada thead tr {
+    background-color: #a6bea5; /* Verde escuro sólido */
+    color: white; /* Texto branco */
+}
+
+.tabela-estilizada tbody tr:nth-child(even) {
+    background-color: #e8eff1; /* Fundo para linhas pares */
+}
+
+/* Linha final da tabela */
+.tabela-fim {
+    background-color: #344E41; /* Fundo verde escuro */
+    height: 5px;
+    padding: 0;
+    border: none;
+}
+
+/* Badges de status */
+.tabela-estilizada .badge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Botões */
+.btn {
+    margin-bottom: 10px; /* Espaçamento para evitar sobreposição */
+}
+
+.btn-sm {
+    font-size: 0.875rem; /* Botões menores */
+}
+
+/* Última linha da tabela */
+.tabela-final {
+    background-color: #588157; /* Verde médio */
+    color: white;
+    font-size: 9px;
+    height: 10px;
+    border-radius: 8px;
+    border-top: 1px solid #344E41; /* Linha superior */
+    border-bottom: 1px solid #344E41; /* Linha inferior */
+    text-align: center;
+}
+
+/* Tabelas responsivas */
+.table-responsive {
+    overflow-x: auto; /* Habilita rolagem horizontal */
+    max-width: 100%; /* Limita a largura ao tamanho da tela */
+    border: 1px solid #ccc; /* Borda para destacar o contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na tela */
+    -webkit-overflow-scrolling: touch; /* Suaviza rolagem em dispositivos móveis */
+}
+
+/* Ajustes para os formulários e botões */
+.tabela-estilizada form,
+.text-center form {
+    margin: 0; /* Remove qualquer margem extra */
+    padding: 0; /* Remove qualquer padding extra */
+    display: inline; /* Garante que o formulário esteja inline com o conteúdo */
+}
+
+.tabela-estilizada .btn-excluir,
+.text-center .btn-danger {
+    display: inline-block;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #dc3545; /* Fundo vermelho */
+    border: none; /* Remove a borda */
+    transition: all 0.3s ease;
+}
+
+.text-center .btn-danger:hover {
+    background-color: #c82333; /* Fundo vermelho escuro */
+}
+
+/* Estilo adicional para telas menores */
+@media (max-width: 768px) {
+    .tabela-estilizada th,
+    .tabela-estilizada td {
+        font-size: 8px; /* Texto menor em telas pequenas */
+    }
+}
+@media (max-width: 768px) {
+    .tabela-container {
+        min-width: 100%; /* Em telas pequenas, ocupar apenas o espaço disponível */
+    }
+}

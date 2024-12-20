@@ -1,0 +1,51 @@
+{% load static %}
+<div class="custom-sidebar" id="sidebar">
+    
+    
+    <!-- Ícone no lugar da logo -->
+    <a href="{% url 'home' %}" class="sidebar-home-icon">
+        <img src="{% static 'imagens/index.png' %}" alt="Ícone Home" class="home-icon">
+    </a>
+
+    <!-- Links da Sidebar -->
+    <div class="sidebar-links">
+        {% if user.is_authenticated %}
+            <!-- Opções Comuns -->
+            <div class="sidebar-nav-button" onclick="window.location.href='{% url 'lista_produtos' %}'">
+                <img src="{% static 'imagens/lista-produtos.png' %}" alt="Lista de Produtos" class="sidebar-icon">
+                <span>Lista de Produtos</span>
+            </div>
+            <div class="sidebar-nav-button" onclick="window.location.href='{% url 'relatorio_entrada_saida' %}'">
+                <img src="{% static 'imagens/relatorio.png' %}" alt="Relatório" class="sidebar-icon">
+                <span>Relatório de Entrada e Saída</span>
+            </div>
+            <div class="sidebar-nav-button" onclick="window.location.href='{% url 'lista_pedidos' %}'">
+                <img src="{% static 'imagens/lista-pedidos.png' %}" alt="Lista de Pedidos" class="sidebar-icon">
+                <span>Lista de Pedidos</span>
+            </div>
+        {% endif %}
+
+        {% if user.is_superuser %}
+            <!-- Opções de Administração -->
+            <div class="sidebar-nav-button" onclick="window.location.href='{% url 'admin_dashboard' %}'">
+                <img src="{% static 'imagens/admin.png' %}" alt="Administração" class="sidebar-icon">
+                <span>Administração</span>
+            </div>
+            <div class="sidebar-nav-button" onclick="window.location.href='{% url 'gerenciar_pedidos' %}'">
+                <img src="{% static 'imagens/gerenciamento.png' %}" alt="Gerenciar Pedidos" class="sidebar-icon">
+                <span>Gerenciar Pedidos</span>
+            </div>
+            <div class="sidebar-nav-button" onclick="window.location.href='{% url 'criar_escola' %}'">
+                <img src="{% static 'imagens/mais.png' %}" alt="Criar Escola" class="sidebar-icon">
+                <span>Criar Escola</span>
+            </div>
+        {% endif %}
+    </div>
+</div>
+<script>
+    function toggleSidebar() {
+    const sidebar = document.getElementById("sidebar");
+    const isVisible = sidebar.style.display === "block";
+    sidebar.style.display = isVisible ? "none" : "block";
+}
+</script>

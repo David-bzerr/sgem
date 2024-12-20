@@ -1,0 +1,55 @@
+{% extends 'modelo.html' %}
+
+{% block titulo %}
+<title>Editar Produto</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="container mt-4 tabela-container">
+    <!-- Título Principal -->
+    <h2 class="titulo-principal text-center mb-4">Editar Produto</h2>
+
+    <!-- Formulário de Edição -->
+    <form method="POST" class="p-4 rounded shadow-lg" style="background-color: #ffffff;">
+        {% csrf_token %}
+        
+        <!-- Nome do Produto -->
+        <div class="form-group mb-4">
+            <label for="id_nome" class="form-label fw-bold text-secondary">Nome:</label>
+            <input type="text" name="nome" id="id_nome" class="form-control border border-secondary" value="{{ produto.nome }}" required placeholder="Digite o nome do produto">
+        </div>
+
+        <!-- Categoria -->
+        <div class="form-group mb-4">
+            <label for="id_categoria" class="form-label fw-bold text-secondary">Categoria:</label>
+            <select name="categoria" id="id_categoria" class="form-control border border-secondary" required>
+                <option value="" disabled selected>Selecione uma categoria</option>
+                <option value="Frutas" {% if produto.categoria == 'Frutas' %}selected{% endif %}>Frutas</option>
+                <option value="Verduras e Legumes" {% if produto.categoria == 'Verduras e Legumes' %}selected{% endif %}>Verduras e Legumes</option>
+                <option value="Carnes" {% if produto.categoria == 'Carnes' %}selected{% endif %}>Carnes</option>
+                <option value="Laticínios" {% if produto.categoria == 'Laticínios' %}selected{% endif %}>Laticínios</option>
+                <option value="Grãos e Cereais" {% if produto.categoria == 'Grãos e Cereais' %}selected{% endif %}>Grãos e Cereais</option>
+                <option value="Bebidas" {% if produto.categoria == 'Bebidas' %}selected{% endif %}>Bebidas</option>
+                <option value="Outros" {% if produto.categoria == 'Outros' %}selected{% endif %}>Outros</option>
+            </select>
+        </div>
+
+        <!-- Quantidade -->
+        <div class="form-group mb-4">
+            <label for="id_quantidade" class="form-label fw-bold text-secondary">Quantidade:</label>
+            <input type="number" name="quantidade" id="id_quantidade" class="form-control border border-secondary" value="{{ produto.quantidade }}" required placeholder="Digite a quantidade do produto">
+        </div>
+
+        <!-- Data de Validade -->
+        <div class="form-group mb-4">
+            <label for="id_data_validade" class="form-label fw-bold text-secondary">Data de Validade:</label>
+            <input type="date" name="data_validade" id="id_data_validade" class="form-control border border-secondary" value="{{ produto.data_validade }}" required>
+        </div>
+
+        <!-- Botão de Envio -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4 py-2 fw-bold">Salvar</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'modelo.html' %}
+
+{% block titulo %}
+<title>Fazer Pedido</title>
+{% endblock %}
+
+{% block conteudo %}
+<div class="container mt-4 tabela-container">
+    <!-- Título Principal -->
+    <h2 class="titulo-principal text-center mb-4">Fazer Pedido de Produto</h2>
+    
+    <!-- Formulário de Pedido -->
+    <form method="POST" class="p-4 rounded shadow-lg" style="background-color: #ffffff;">
+        {% csrf_token %}
+
+        <!-- Campo Produto -->
+        <div class="form-group mb-4">
+            <label for="produto" class="form-label fw-bold text-secondary">Produto:</label>
+            <input 
+                type="text" 
+                class="form-control border border-secondary" 
+                id="produto" 
+                name="produto" 
+                placeholder="Digite o nome do produto"
+                required>
+        </div>
+
+        <!-- Campo Quantidade -->
+        <div class="form-group mb-4">
+            <label for="quantidade" class="form-label fw-bold text-secondary">Quantidade:</label>
+            <input 
+                type="number" 
+                class="form-control border border-secondary" 
+                id="quantidade" 
+                name="quantidade" 
+                min="1"
+                placeholder="Digite a quantidade"
+                required>
+        </div>
+
+        <!-- Botão de Envio -->
+        <div class="text-center">
+            <button type="submit" class="btn btn-success px-4 py-2 fw-bold">Fazer Pedido</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

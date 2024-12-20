@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Fundo claro geral */
+    color: #344E41; /* Texto padrão */
+}
+
+/* Sidebar Geral */
+.custom-sidebar {
+    width: 250px;  /* Largura da sidebar */
+    background-color: #344E41;
+    color: #DAD7CD;
+    padding: 20px;
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    left: -250px; /* Sidebar começa fora da tela */
+    transition: left 0.3s ease; /* Transição suave para a sidebar aparecer */
+}
+
+/* Para telas menores, a sidebar será ajustada */
+@media (max-width: 768px) {
+    .custom-sidebar {
+        width: 200px;  /* Ajuste a largura da sidebar para dispositivos móveis */
+    }
+}
+
+/* Quando a sidebar estiver visível */
+.custom-sidebar.open {
+    left: 0;  /* Move a sidebar para dentro da tela */
+}
+
+/* Botão para abrir a sidebar */
+#toggleSidebar {
+    display: none; /* Esconde o botão de abertura na versão desktop */
+}
+
+/* Para telas menores, mostrar o botão de abrir sidebar */
+@media (max-width: 768px) {
+    #toggleSidebar {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #344E41;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+}
+
+
+/* Botão de Fechar */
+.close-sidebar-btn {
+    background-color: #588157;
+    border: none;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+/* Ícone da Home */
+.sidebar-home-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.home-icon {
+    width: 50px;
+    height: 50px;
+}
+
+/* Links da Sidebar */
+.sidebar-links {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Botões da Sidebar */
+.sidebar-nav-button {
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #588157, #344E41);
+    color: #DAD7CD;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-nav-button:hover {
+    background: linear-gradient(90deg, #A3B18A, #344E41);
+    transform: scale(1.05);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ícones nos Botões */
+.sidebar-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Espaçamento entre os elementos */
+.sidebar-nav-button + .sidebar-nav-button {
+    margin-top: 30px; /* Aumenta o espaço entre os botões */
+}

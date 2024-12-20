@@ -1,0 +1,90 @@
+/* Contêiner Principal */
+.tabela-container {
+    max-width: 600px;
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 20px; /* Espaçamento interno opcional */
+}
+
+/* Títulos */
+.titulo-principal {
+    color: #343a40; /* Cinza escuro */
+    font-weight: 700; /* Negrito */
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 20px; /* Espaço inferior */
+}
+
+/* Estilo do Formulário */
+form {
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 8px; /* Borda arredondada */
+    padding: 20px; /* Espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave */
+}
+
+/* Labels */
+.form-label {
+    font-weight: bold; /* Negrito */
+    color: #6c757d; /* Texto cinza */
+    margin-bottom: 5px; /* Espaçamento abaixo */
+}
+
+/* Inputs e Selects */
+.form-control {
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ced4da; /* Cor da borda */
+    border-radius: 4px; /* Arredondamento leve */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    font-size: 16px; /* Tamanho da fonte */
+}
+
+.form-control:focus {
+    border-color: #80bdff; /* Borda azul ao focar */
+    outline: none; /* Remove o contorno padrão */
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.25); /* Sombra azul ao focar */
+}
+
+/* Botões */
+.btn {
+    display: inline-block; /* Define como bloco-inline */
+    font-weight: bold; /* Texto em negrito */
+    color: #fff; /* Texto branco */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px 20px; /* Espaçamento interno */
+    border-radius: 4px; /* Borda arredondada */
+    cursor: pointer; /* Cursor em formato de mão */
+    transition: all 0.3s ease; /* Transição suave */
+}
+
+.btn-success {
+    background-color: #5cb85c; /* Fundo verde */
+    border: 1px solid #4cae4c; /* Borda verde mais escura */
+}
+
+.btn-success:hover {
+    background-color: #4cae4c; /* Fundo verde escuro */
+    border-color: #3b8b3b; /* Borda verde ainda mais escura */
+}
+
+/* Estilo para Centralização */
+.text-center {
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+/* Margem Inferior para os Campos do Formulário */
+.form-group {
+    margin-bottom: 20px; /* Espaço inferior entre os campos */
+}
+
+/* Resposividade */
+@media (max-width: 768px) {
+    .tabela-container {
+        padding: 10px; /* Reduz o padding em telas pequenas */
+    }
+
+    form {
+        padding: 15px; /* Ajusta o padding do formulário */
+    }
+}
+
+
